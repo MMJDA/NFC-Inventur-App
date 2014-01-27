@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView_Benutzer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/benutzer" />
+
+    <TextView
+        android:id="@+id/textView_Benutzername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView_Benutzer"
+        android:layout_alignBottom="@+id/textView_Benutzer"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/textView_Benutzer"
+        android:text="@string/benutzername" />
+
+    <TextView
+        android:id="@+id/textView_Emailanzeige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView_Email"
+        android:layout_alignBottom="@+id/textView_Email"
+        android:layout_alignLeft="@+id/textView_Benutzername" />
+
+    <TextView
+        android:id="@+id/textView_gelesene_geraete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/streifen1"
+        android:layout_below="@+id/streifen1"
+        android:layout_marginTop="14dp"
+        android:text="@string/gelesene_geraete" />
+
+    <TextView
+        android:id="@+id/textView_Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/streifen1"
+        android:layout_below="@+id/textView_Benutzer"
+        android:layout_marginTop="19dp"
+        android:text="@string/email" />
+    
+    <TextView
+        android:id="@+id/textView_anzahl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView_gelesene_geraete"
+        android:layout_alignBottom="@+id/textView_gelesene_geraete"
+        android:layout_marginLeft="44dp"
+        android:layout_toRightOf="@+id/textView_gelesene_geraete"
+        android:text="@string/start_anzahl" />
+
+    <TableLayout
+        android:id="@+id/streifen1"
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        android:layout_alignLeft="@+id/textView_Benutzer"
+        android:layout_below="@+id/textView_Emailanzeige"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="14dp"
+        android:background="#87CEFA"
+        android:orientation="vertical" >
+	</TableLayout>
+
+    <TableLayout
+        android:id="@+id/streifen2"
+        android:layout_width="300dp"
+        android:layout_height="5dp"
+        android:layout_alignLeft="@+id/textView_gelesene_geraete"
+        android:layout_alignRight="@+id/streifen1"
+        android:layout_below="@+id/textView_gelesene_geraete"
+        android:layout_marginTop="14dp"
+        android:background="#87CEFA"
+        android:orientation="vertical" >
+	</TableLayout>
+
+    <ListView
+        android:id="@+id/listView_geraete"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignLeft="@+id/streifen2"
+        android:layout_alignRight="@+id/streifen2"
+        android:layout_below="@+id/streifen2" >
+
+    </ListView>
+
+    <TableLayout
+        android:id="@+id/streifen3"
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        android:layout_alignLeft="@+id/listView_geraete"
+        android:layout_alignRight="@+id/listView_geraete"
+        android:layout_below="@+id/listView_geraete"
+        android:background="#87CEFA"
+        android:orientation="vertical" >
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button_legende"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/streifen3"
+        android:layout_marginBottom="19dp"
+        android:text="@string/button_text" 
+        android:onClick="ButtonOnClick"/>
+
+</RelativeLayout>
